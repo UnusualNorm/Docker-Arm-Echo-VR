@@ -58,7 +58,7 @@ RUN bash /wrap-wine.sh \
 # COPY ./ready-at-dawn-echo-arena /ready-at-dawn-echo-arena
 VOLUME /ready-at-dawn-echo-arena
 WORKDIR /ready-at-dawn-echo-arena/bin/win10
-RUN wine wineboot && wine64 wineboot
+RUN wine64 wineboot
 
 COPY ./demoprofile.json "/root/.wine64/drive_c/users/root/AppData/Local/rad/echovr/users/dmo/"
 VOLUME /root/.wine64/drive_c/users/root/AppData/Local/rad/
